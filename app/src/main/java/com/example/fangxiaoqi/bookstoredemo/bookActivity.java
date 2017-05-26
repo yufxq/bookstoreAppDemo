@@ -7,10 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,20 +15,16 @@ import java.util.List;
 import model.Book;
 import zrc.widget.SimpleHeader;
 import zrc.widget.ZrcListView;
-import zrc.widget.ZrcListView.OnItemClickListener;
 import zrc.widget.ZrcListView.OnStartListener;
 
-import android.app.Notification;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,13 +34,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class bookActivity extends ActionBarActivity {
+public class bookActivity extends AppCompatActivity {
 
     private ZrcListView listView;
     private MyAdapter adapter;
@@ -194,13 +186,6 @@ public class bookActivity extends ActionBarActivity {
         adapter = new MyAdapter(this);
         listView.setAdapter(adapter);
 
-        
-        /*listView.setOnItemClickListener(new OnItemClickListener(){
-
-			@Override
-			public void onItemClick(ZrcListView parent, View view,int position, long id) {
-				//TextView t=(TextView)view.findViewById(R.id.name);
-			}});*/
 
 		refresh(); // 主动下拉刷新
         
@@ -333,8 +318,6 @@ public class bookActivity extends ActionBarActivity {
 				
 				@Override
 				public void onClick(View v) {
-					//db.q("delete from crm where id='"+item.strID.getText()+"' ");
-					//listView.refresh();
 					new Thread(new Runnable(){
 						@Override
 						public void run() {

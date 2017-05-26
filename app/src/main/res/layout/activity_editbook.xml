@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_border_f1"
-        android:hint="请输入标题"
+        android:hint="@string/title_hint"
         android:textColor="#ff4499aa"
         android:textSize="20dp" />
 
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_border_f1"
-        android:hint="请输入作者名"
+        android:hint="@string/author_hint"
         android:textColor="#ff4499aa"
         android:textSize="20dp" />
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_border_f1"
-        android:hint="请输入价格"
+        android:hint="@string/price_hint"
         android:inputType="number"
         android:textColor="#ff4499aa"
         android:textSize="20dp" />
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_border_f1"
-        android:hint="请输入出版社"
+        android:hint="@string/publisher_hint"
         android:textColor="#ff4499aa"
         android:textSize="20dp" />
     <Button
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:background="#ff008888"
         android:textColor="#ffffff00"
-        android:text="确定" />
+        android:text="@string/submit_button" />
 
 
 </LinearLayout>

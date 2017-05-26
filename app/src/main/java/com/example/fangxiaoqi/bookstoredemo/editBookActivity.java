@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import android.widget.Button;
@@ -32,7 +33,7 @@ import static com.example.fangxiaoqi.bookstoredemo.bookActivity.thisbook;
 
 
 
-public class editBookActivity extends ActionBarActivity {
+public class editBookActivity extends AppCompatActivity {
 
     private Button submit;
 
@@ -132,7 +133,7 @@ public class editBookActivity extends ActionBarActivity {
                 new Thread(new Runnable(){
                     @Override
                     public void run() {
-                        sendHttpPost("http://"+ip+"/rest/updateBook",thisbook);
+                        sendHttpPost("http://"+ip+"/rest/updateBook",bookActivity.thisbook);
                     }}).start();
             }
         });
